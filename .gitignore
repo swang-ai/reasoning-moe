@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.moe_steer_tmp/
+.DS_Store
+.env
+
+data/traces/
+data/labels/
+data/experts/
+eval/experts/
+*.pkl
+results/
+eval/results/
+*.texts.json
+data/
+eval/

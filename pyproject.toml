@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reasoning-moe"
+version = "0.1.0"
+description = "Find and causally steer reasoning-phase experts in Mixture-of-Experts LLMs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "torch>=2.3",
+]
+
+[project.optional-dependencies]
+run = [
+    "vllm>=0.16",
+    "transformers>=4.56",
+    "datasets>=2.19",
+    "openai>=1.0",
+    "math-verify",
+]
+
+[tool.setuptools.packages.find]
+include = ["moe_steer*"]
